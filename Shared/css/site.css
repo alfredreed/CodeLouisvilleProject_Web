@@ -10,11 +10,84 @@
     align-items: center;
 }
 
+.infoPara {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-Container {
+    min-width: 200px;
+    min-height: 200px; 
+    border: none;
+}
+
+.formContainer {
+    color: #f8f8f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+}
+
+.contactInfo-Container {
+    color: #f8f8f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80vh;
+}
+
+.orderReset {
+    margin-right: 10px;
+}
+
+.action-Containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group {
+    margin: 10px;
+}
+.orderPage-Banner {
+    background: linear-gradient(90deg, rgba(24, 24, 24, 0) 0, #000000ad), url(../img/orderBanner.png);
+}
+
+.contactPage-Banner {
+    background: linear-gradient(90deg, rgba(24, 24, 24, 0) 0, #000000ad), url(../img/contactbanner.png);
+}
+
+.comicsPage-Banner {
+    background: linear-gradient(90deg, rgba(24, 24, 24, 0) 0, #000000ad), url(../img/allheros.png);
+}
+
+.comicsPage-Banner, .contactPage-Banner, .orderPage-Banner {
+    display: none;
+    visibility: hidden;
+    background-size: cover;
+    height: 80vh;    
+}
+
 .orderButton {
     color: #F1F1F1;
     height: 20px;
     width: 50px;
     background-color: #c30808;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.orderButton-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .bookTitle {
@@ -24,6 +97,7 @@
 .newsArticle{
     display: flex;
     flex-direction: column;
+    color:#F1F1F1;
     justify-content: space-between;
     margin: 5px;
 }
@@ -37,13 +111,8 @@
 .subArticleImage {
     height: 200px;
     object-fit: cover;
+    box-shadow: -3px 2px 2px #e5a00d;
 }
-
-/* .mangaArticle-Container {
-    max-width: 100%;
-    color: #f8f8f7;
-    margin-right: 5px;
-} */
 
 .comicArticle-Container, .mangaArticle-Container {
     width: 100%;
@@ -71,14 +140,9 @@
 }
 
 .articleImage {
-    /*box-shadow: 1px 2px 2px #e5a00d;*/
     max-height: 400px;
     margin-bottom: 10px;
 }
-
-/* .newsArticle{
-    margin-left: 5px;
-} */
 
 .mainArticle-ImgLink {
     position: relative;
@@ -151,12 +215,6 @@
     flex-direction: row;        
 }
 
-/* .navLinkText-Container {
-    height: max(1em, 1rem);
-    font-size: 20px;
-    color: #f1f1f1;
-} */
-
 .navLinkText-Container {
     font-size: 20px;
     margin-top: 4px;
@@ -166,7 +224,14 @@
     font-size: 24px;
 }
 
-.navImage-Container, .navLinkText-Container {
+.colImage-Container {
+    display: none;
+    visibility: hidden;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navImage-Container, .navLinkText-Container, .colImage-Container {
     height: max(1em, 1rem);
     color: #f8f8f7;
 }
@@ -179,11 +244,6 @@
 #main-Nav li a.navOption:hover {
     color: #E5A00D;
 }
-
-/* svg:hover {
-    fill: red;
-} */
-
 
 #main-Nav li a {
     text-decoration: none;
@@ -201,8 +261,8 @@
 }
 
 .nav-Container {
-    height: inherit;
-    width: 50px;
+    height: 100%;
+    width: 44px;
     border: solid;
     border-color: #2b2a2a;
     border-radius: 5px;
@@ -241,8 +301,13 @@ p {
     margin-top: 5px;
 }
 
+a {
+    text-decoration: none;
+}
+
 h3 {
     margin-bottom: 20px;
+
 }
 
 h2{
@@ -250,27 +315,23 @@ h2{
     margin: 10px 10px 10px 0;
 }
 
-header a {
-    text-decoration: none;
-}
-
 h1 {
     color: #E5A00D;;
 }
 
-header{
+form {
+    color:#F1F1F1;
+}
+
+.headerSection-Container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border: solid;
     border-color: #2b2a2a;
     border-radius: 5px;
     height: 50px;
     margin: 5px 5px 5px 5px;
-}
-
-main {
-    /* display: block; */
 }
 
 body {
@@ -294,9 +355,35 @@ body{
     margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
+
+    .colImage-Container {
+        display: block;
+        visibility: visible;
+    }
+
+    .action-Containers {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .nav-Container {
         width: 200px;
+    }
+
+    .formContainer {
+        align-items: flex-start;
+    }
+
+    .comicsPage-Banner, .contactPage-Banner, .orderPage-Banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
     }
 
     a.mainArticle-ImgLink:after {
@@ -304,9 +391,9 @@ body{
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 30%;
+        width: 33%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(24,24,24,0) 0, #000);
+        background: linear-gradient(90deg, rgba(24,24,24,0) 0, #000000eb);
     }
 
     .mainArticle-ImgLink {
@@ -323,6 +410,10 @@ body{
 
     .subArticleFigure {
         height: 200px;
+    }
+
+    .comicArticle-Container, .mangaArticle-Container {
+        width: 50%;
     }
 
     .subArticles-Container {
@@ -342,4 +433,11 @@ body{
         align-items: center;
         margin-right: 180px;
     }
+}
+
+@media only screen and (min-width: 604px) {
+    .mainArticle-ImgLink, .newsArticle {
+        width: 100%;
+    }
+
 }
