@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function (e) {
         desc.innerText = bookOrder.desc;
 
         const img = document.querySelector(".subArticleImage");
-        img.setAttribute("src", `/Shared/img/${bookOrder.id}.png`);
+        img.setAttribute("src", `./Shared/img/${bookOrder.id}.png`);
         img.setAttribute("alt", bookOrder.Title);
     }
  });
